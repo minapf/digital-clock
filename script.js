@@ -112,8 +112,6 @@ function initClock() {
 document.addEventListener('DOMContentLoaded', initClock);
 
 // Alternative initialization for older browsers
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initClock);
-} else {
+if (document.readyState !== 'loading') {
     initClock();
 }
